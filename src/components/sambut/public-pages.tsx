@@ -837,7 +837,7 @@ export function GoldenTicket({
       <div className="ticket-location">
         <MapPin aria-hidden="true" />
         <div>
-          <strong>{dateTime}</strong>
+          <strong>{dateTime} - 12.00</strong>
           <span>LOCATION · {data.settings.location || "Segera diumumkan"}</span>
           {data.settings.location && (
             <a
