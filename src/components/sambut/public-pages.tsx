@@ -820,13 +820,13 @@ export function GoldenTicket({
         <Brand compact />
         <div className="ticket-event">{data.settings.name}</div>
         <h2>{ticketName}</h2>
-        <p className="ticket-recipient">
+        {/* <p className="ticket-recipient">
           {member
             ? `${member.role} · ${item.name}`
             : item.category === "SMP"
-              ? `${identity.name} · ${identity.role}`
+              ? ``
               : identity.role}
-        </p>
+        </p> */}
         {!member && identity.institution && item.category !== "SMP" && (
           <p className="ticket-institution">{identity.institution}</p>
         )}
