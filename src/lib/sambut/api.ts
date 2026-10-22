@@ -1,6 +1,6 @@
 import type { Invitation, Settings, Message, Activity } from "./store";
 
-const API_BASE = (import.meta.env.VITE_API_URL as string) || "http://127.0.0.1:8000/api";
+const API_BASE = (import.meta.env['VITE_API_URL'] as string) || "https://ticket-emas-be.wasmer.app/api";
 
 function getToken(): string | null {
   return typeof localStorage !== "undefined" ? localStorage.getItem("sambut-token") : null;
