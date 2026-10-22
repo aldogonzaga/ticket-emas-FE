@@ -781,7 +781,7 @@ function ticketIdentity(item: Invitation) {
   const role =
     item.title ||
     (item.category === "SMP"
-      ? item.pic ? `${item.pic} · Guru Pendamping` : ""
+      ? item.pic ? `` : ""
       : item.category === "Guru"
         ? "Guru / Pendidik"
         : item.category === "VIP"
