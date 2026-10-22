@@ -777,11 +777,11 @@ export function RsvpPage() {
 
 function ticketIdentity(item: Invitation) {
   const name = item.name;
-  const institution = item.category === "SMP" ? (item.principal || "") : item.institution;
+  const institution = item.category === "SMP" ? (item.pic || "") : item.institution;
   const role =
     item.title ||
     (item.category === "SMP"
-      ? item.principal ? `${item.principal} · Kepala Sekolah` : "Kepala Sekolah"
+      ? item.pic ? `${item.pic} · Kepala Sekolah` : "Kepala Sekolah"
       : item.category === "Guru"
         ? "Guru / Pendidik"
         : item.category === "VIP"
