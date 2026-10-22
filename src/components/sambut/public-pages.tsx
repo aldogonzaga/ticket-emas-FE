@@ -41,10 +41,10 @@ import { PublicLayout } from "./public-layout";
 import { SectionLabel, ArrowLink, Brand, Badge, RsvpBadge, Empty, copyText } from "./shared";
 
 export const schedule = [
-  ["08.00 – 09.00", "Sugeng Rawuh", "Registrasi tamu, penyambutan, dan pembukaan gerbang acara."],
-  ["09.00 – 09.30", "Harmoni Pembuka", "Pembukaan dan persembahan seni budaya Nusantara."],
-  ["09.30 – 11.00", "Panggung Prestasi", "Selebrasi karya, potensi, dan pencapaian generasi muda."],
-  ["11.00 – 12.00", "Langkah Bersama", "Penandatanganan MOU, ramah tamah, dan penutupan."],
+  ["09.00 – 10.00", "Sugeng Rawuh", "Registrasi tamu, penyambutan, dan pembukaan gerbang acara."],
+  ["10.00 – 10.44", "Harmoni Pembuka", "Pembukaan dan persembahan seni budaya Nusantara."],
+  ["10.44 – 11.39", "Panggung Prestasi", "Selebrasi karya, potensi, dan pencapaian generasi muda."],
+  ["11.39 – 12.00", "Langkah Bersama", "Penandatanganan MOU, ramah tamah, dan penutupan."],
 ];
 
 // URL Google Calendar dengan Waktu Acara
