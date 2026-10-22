@@ -34,9 +34,9 @@ export function InvitationForm({
     e.preventDefault();
     if (
       form.category === "SMP" &&
-      (!form.principal.trim() || form.quota > 10 || form.members.length > form.quota)
+      (form.quota > 10 || form.members.length > form.quota)
     ) {
-      toast.error("Periksa nama kepala sekolah dan kuota rombongan.");
+      toast.error("Periksa batas kuota rombongan (maksimal 10).");
       return;
     }
     if (!Number.isInteger(form.quota) || form.quota < form.checked || form.quota < 1) {
@@ -92,9 +92,8 @@ export function InvitationForm({
           {form.category === "SMP" ? (
             <>
               <label className="field full">
-                <span>Nama lengkap kepala sekolah *</span>
+                <span>Nama lengkap kepala sekolah</span>
                 <input
-                  required
                   value={form.principal}
                   onChange={(e) => update("principal", e.target.value)}
                   placeholder="Nama dan gelar kepala sekolah"
@@ -225,7 +224,7 @@ export function BulkImporter({ onClose }: { onClose: () => void }) {
         .split(l.includes("|") ? "|" : l.includes("\t") ? "\t" : ",")
         .map((v) => v.trim());
       const error =
-        !cols[0] || (category === "SMP" && !cols[1])
+        !cols[0]
           ? "Kolom wajib belum lengkap"
           : data.invitations.some(
                 (i) =>
