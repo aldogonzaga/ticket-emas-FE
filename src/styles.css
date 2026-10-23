@@ -321,11 +321,11 @@ img {
   display: flex;
   gap: 15px;
   margin-top: 32px;
-  text-decoration-color: black;
+  /* color: black; */
 }
-.hero-buttons > a,
-.hero-buttons button {
-  text-decoration-color: black;
+.hero-buttons > a { 
+/* .hero-buttons button { */
+  color: black;
   height: 45px;
   font-size: 11px;
 }
@@ -2910,11 +2910,13 @@ img {
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 27px;
+    /* color: black; */
   }
   .hero-buttons > a {
     font-size: 10px;
     height: 42px;
     padding-inline: 17px;
+    color: black;
   }
   .hero-scroll {
     margin-top: 33px;
