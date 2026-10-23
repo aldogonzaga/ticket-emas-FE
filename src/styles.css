@@ -325,7 +325,7 @@ img {
 }
 .hero-buttons > a { 
 /* .hero-buttons button { */
-  color: black;
+  /* color: black; */
   height: 45px;
   font-size: 11px;
 }
@@ -2916,11 +2916,10 @@ img {
     font-size: 10px;
     height: 42px;
     padding-inline: 17px;
-    color: black;
   }
 
-  .detail {
-    color:white !important;
+  .klaim {
+    color:black !important;
   }
 
   .hero-scroll {

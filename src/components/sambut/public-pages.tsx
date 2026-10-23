@@ -217,14 +217,14 @@ export function HomePage() {
                   Memuat undangan…
                 </p>
               ) : (
-                <Button className="text-black" asChild size="lg">
-                  <a href="#Klaim Tiket">
+                <Button asChild size="lg">
+                  <a className="klaim" href="#Klaim Tiket">
                     Buka Tiket Undangan <ArrowUpRight />
                   </a>
                 </Button>
               )}
               <Button asChild size="lg" variant="outline" className="outline-hero">
-                <a className="detail" href="#rundown-acara">
+                <a href="#rundown-acara">
                   Detail Acara <ArrowRight />
                 </a>
               </Button>
