@@ -2918,6 +2918,11 @@ img {
     padding-inline: 17px;
     color: black;
   }
+
+  .detail {
+    color:white;
+  }
+  
   .hero-scroll {
     margin-top: 33px;
   }

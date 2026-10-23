@@ -224,7 +224,7 @@ export function HomePage() {
                 </Button>
               )}
               <Button asChild size="lg" variant="outline" className="outline-hero">
-                <a href="#rundown-acara">
+                <a className="detail" href="#rundown-acara">
                   Detail Acara <ArrowRight />
                 </a>
               </Button>
