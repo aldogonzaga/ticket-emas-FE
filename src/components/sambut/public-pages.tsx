@@ -203,7 +203,7 @@ export function HomePage() {
             </p>
             <div className="hero-buttons">
               {invitation ? (
-                <Button asChild size="lg">
+                <Button className="text-black" asChild size="lg">
                   <Link to="/ticket/$code" params={{ code: invitation.code }}>
                     Buka Tiket Undangan <ArrowUpRight />
                   </Link>
