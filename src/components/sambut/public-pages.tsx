@@ -205,7 +205,7 @@ export function HomePage() {
               {invitation ? (
                 <Button asChild size="lg">
                   <Link to="/ticket/$code" params={{ code: invitation.code }}>
-                    Klaim Tiket Undangan <ArrowUpRight />
+                    Buka Tiket Undangan <ArrowUpRight />
                   </Link>
                 </Button>
               ) : invitationCode && ready ? (
@@ -219,7 +219,7 @@ export function HomePage() {
               ) : (
                 <Button asChild size="lg">
                   <a href="#Klaim Tiket">
-                    Klaim Tiket <ArrowUpRight />
+                    Buka Tiket Undangan <ArrowUpRight />
                   </a>
                 </Button>
               )}

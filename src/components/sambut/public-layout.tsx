@@ -39,7 +39,7 @@ export function PublicLayout({ children }: { children: ReactNode }) {
           <div className="nav-actions">
             <Button asChild className="nav-rsvp" variant="outline">
               <Link to="/rsvp">
-                Klaim Tiket
+                Buka Tiket Undangan
                 <ArrowUpRight />
               </Link>
             </Button>
@@ -73,7 +73,7 @@ export function PublicLayout({ children }: { children: ReactNode }) {
                 {label}
               </Link>
             ))}
-            <Link to="/rsvp">Klaim Tiket</Link>
+            <Link to="/rsvp">Buka Tiket Undangan</Link>
           </nav>
           <div className="footer-contact">
             <strong>Hubungi Kami</strong>
