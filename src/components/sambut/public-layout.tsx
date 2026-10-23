@@ -4,9 +4,14 @@ import { ArrowUpRight, Menu, X, Flower2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Brand } from "./shared";
 import { useSambut } from "@/lib/sambut/store";
-
+import {
+  // useSambut,
+  blankInvitation,
+  newInvitation,
+  type Invitation,
+} from "@/lib/sambut/store";
 export function PublicLayout({ children }: { children: ReactNode }) {
-  const { data } = useSambut();
+  const { data, ready } = useSambut();
   const [open, setOpen] = useState(false);
   const path = useRouterState({ select: (s) => s.location.pathname });
   const nav = [
@@ -18,7 +23,12 @@ export function PublicLayout({ children }: { children: ReactNode }) {
   const fallbackContact = "+62812-8866-6916";
   const contactNumber = data?.settings?.contact || fallbackContact;
   const formattedWaNumber = contactNumber.replace(/^0/, "62").replace(/\D/g, "");
-
+  const searchStr = useRouterState({ select: (state) => state.location.searchStr });
+  const invitationCode = new URLSearchParams(searchStr).get("undangan");
+  const invitation = invitationCode
+    ? data.invitations.find((item) => item.code === invitationCode && !item.cancelled)
+    : undefined;
+  
   return (
     <div className="public-app">
       <header className="public-header">
@@ -37,12 +47,28 @@ export function PublicLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
           <div className="nav-actions">
-            <Button asChild className="nav-rsvp" variant="outline">
-              <Link to="/rsvp">
-                Buka Tiket Undangan
-                <ArrowUpRight />
-              </Link>
-            </Button>
+            {invitation ? (
+              <Button asChild className="nav-rsvp" variant="outline">
+                <Link to="/ticket/$code" params={{ code: invitation.code }}>
+                  Buka Tiket Undangan <ArrowUpRight />
+                </Link>
+              </Button>
+            ) : invitationCode && ready ? (
+              <p className="field-note" role="alert">
+                Undangan tidak ditemukan atau sudah dibatalkan. Silakan hubungi panitia.
+              </p>
+            ) : invitationCode ? (
+              <p className="field-note" role="status">
+                Memuat undangan…
+              </p>
+            ) : (
+              <Button asChild size="lg">
+                <a className="klaim" href="#Klaim Tiket">
+                  Buka Tiket Undangan <ArrowUpRight />
+                </a>
+              </Button>
+            )}
+
             <Button
               variant="ghost"
               size="icon"
@@ -73,7 +99,6 @@ export function PublicLayout({ children }: { children: ReactNode }) {
                 {label}
               </Link>
             ))}
-            <Link to="/rsvp">Buka Tiket Undangan</Link>
           </nav>
           <div className="footer-contact">
             <strong>Hubungi Kami</strong>
