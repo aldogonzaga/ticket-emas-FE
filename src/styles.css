@@ -321,9 +321,11 @@ img {
   display: flex;
   gap: 15px;
   margin-top: 32px;
+  text-decoration-color: black;
 }
 .hero-buttons > a,
 .hero-buttons button {
+  text-decoration-color: black;
   height: 45px;
   font-size: 11px;
 }
