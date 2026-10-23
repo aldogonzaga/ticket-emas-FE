@@ -217,7 +217,7 @@ export function HomePage() {
                   Memuat undangan…
                 </p>
               ) : (
-                <Button asChild size="lg">
+                <Button className="text-black" asChild size="lg">
                   <a href="#Klaim Tiket">
                     Buka Tiket Undangan <ArrowUpRight />
                   </a>
