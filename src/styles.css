@@ -1464,6 +1464,7 @@ img {
   width: min(100%, 240px);
   height: auto;
   aspect-ratio: 1;
+  transform: scaleX(-1);
 }
 .ticket-location {
   display: grid;
