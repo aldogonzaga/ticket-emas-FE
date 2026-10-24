@@ -63,7 +63,7 @@ export function PublicLayout({ children }: { children: ReactNode }) {
               </p>
             ) : (
               <Button asChild className="nav-rsvp" variant="outline">
-                <Link to="/ticket/harapinputcodeanda">Cek Undangan</Link>
+                <Link to="https://docs.google.com/spreadsheets/d/188BaLCK3JFolGqXpn41LIqDKH4KsYSPELjLyz0XcEns/edit?usp=sharing">Cek Undangan</Link>
               </Button>
             )}
 
