@@ -218,7 +218,7 @@ export function HomePage() {
                 </p>
               ) : (
                 <Button asChild size="lg">
-                  <a className="klaim" href="#Klaim Tiket">
+                  <a className="klaim" href="harapinputcodeanda">
                     Buka Tiket Undangan <ArrowUpRight />
                   </a>
                 </Button>

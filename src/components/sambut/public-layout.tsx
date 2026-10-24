@@ -62,10 +62,8 @@ export function PublicLayout({ children }: { children: ReactNode }) {
                 Memuat undangan…
               </p>
             ) : (
-              <Button asChild size="lg">
-                <a className="klaim" href="#Klaim Tiket">
-                  Buka Tiket Undangan <ArrowUpRight />
-                </a>
+              <Button asChild className="nav-rsvp" variant="outline">
+                <Link to="/ticket/harapinputcodeanda">Cek Undangan</Link>
               </Button>
             )}
 
