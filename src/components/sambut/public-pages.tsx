@@ -217,7 +217,7 @@ export function HomePage() {
                   Memuat undangan…
                 </p>
               ) : (
-                <Button asChild size="lg">``
+                <Button asChild size="lg">
                   <a className="klaim" href="https://docs.google.com/spreadsheets/d/188BaLCK3JFolGqXpn41LIqDKH4KsYSPELjLyz0XcEns/edit?usp=sharing">
                     Buka Tiket Undangan <ArrowUpRight />
                   </a>
